@@ -68,24 +68,27 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 
     // ViewModel + Compose
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0") // 💡 UPDATED
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0") // 💡 UPDATED
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
 
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
 
     // Navigation Compose
-    implementation("androidx.navigation:navigation-compose:2.7.7") // 💡 UPDATED
+    implementation("androidx.navigation:navigation-compose:2.7.7")
+
+    // 🔑 ADDED FIX: Hilt Navigation Compose (Required for hiltViewModel())
+    implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
 
     // Room
-    val roomVersion = "2.6.1" // 💡 UPDATED
+    val roomVersion = "2.6.1"
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
     kapt("androidx.room:room-compiler:$roomVersion")
 
     // WorkManager
-    val workVersion = "2.9.0" // 💡 UPDATED
+    val workVersion = "2.9.0"
     implementation("androidx.work:work-runtime-ktx:$workVersion")
 
     // 🧠 HILT (Dependency Injection)
